@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        arr.push(+prompt('nhập vào các số nguyên'));
+    }
+    let index = +prompt('nhập số index');
+    let arr1 = [];
+    let arr2 = []
+
+    function tryRemoveFromArray(x) {
+        for (let i = 0; i < arr.length; i++) {
+            if (index == i) {
+                arr1.push(arr[i]);
+            } else {
+                arr2.push(arr[i]);
+            }
+        }
+        document.write("mảng index hợp lệ, không còn index :" + arr2 + "<br>");
+        document.write("mảng index không hợp lệ :" + arr1);
+    }
+
+    tryRemoveFromArray()
+</script>
+</body>
+</html>
